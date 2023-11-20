@@ -4,7 +4,7 @@
 function login {
 	local site=$1
 	# lakukan request
-	curl -s "$site/wp-login.php" -d "log=admin&pwd=deden123" \
+	curl -s "$site/wp-login.php" -d "log=admin&pwd=pass" \
 		-w "%{http_code}\n" -o /dev/null > response.html
 	# tampilkan hasil dari request
 	local result=$(cat response.html)
